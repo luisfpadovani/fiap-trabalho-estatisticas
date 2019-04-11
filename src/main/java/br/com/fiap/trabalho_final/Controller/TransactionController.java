@@ -9,13 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
+import java.time.LocalDateTime;
 
 @Slf4j
 @RestController
 public class TransactionController {
 
-    NewTransactionDao daoNewTransactionDao;
-    AllTransactionDao daoAllTransactionDao;
+    public NewTransactionDao daoNewTransactionDao;
+    public AllTransactionDao daoAllTransactionDao;
 
     public TransactionController() {
         daoNewTransactionDao = new NewTransactionDao();
