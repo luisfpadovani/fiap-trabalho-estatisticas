@@ -41,16 +41,16 @@ public class TrabalhoFinalApplicationTests {
 		repositoryNewTransaction = mock(NewTransactionDao.class);
 
 		new_transaction newTransaction = new new_transaction();
-		newTransaction.setAmount(System.currentTimeMillis());
+		newTransaction.setTimestamp(System.currentTimeMillis());
 		newTransaction.setAmount(25000.15);
 		newTransaction.setDataInsert(System.currentTimeMillis());
-		when(this.repositoryNewTransaction.save(newTransaction)).thenReturn(HttpStatus.OK);
+		when(this.repositoryNewTransaction.save(newTransaction)).thenReturn(HttpStatus.CREATED);
 		MediaType MEDIA_TYPE_JSON_UTF8 = new MediaType("application", "json", java.nio.charset.Charset.forName("UTF-8"));
 		MockHttpServletRequestBuilder request = post("/transactions");
 		request.content(new ObjectMapper().writeValueAsString(newTransaction));
 		request.accept(MEDIA_TYPE_JSON_UTF8);
 		request.contentType(MEDIA_TYPE_JSON_UTF8);
-		mvc.perform(request).andExpect(status().isOk());
+		mvc.perform(request).andExpect(status().isCreated());
 	}
 
 	@Test
@@ -59,7 +59,7 @@ public class TrabalhoFinalApplicationTests {
 		repositoryNewTransaction = mock(NewTransactionDao.class);
 
 		new_transaction newTransaction = new new_transaction();
-		newTransaction.setAmount(System.currentTimeMillis());
+		newTransaction.setTimestamp(System.currentTimeMillis());
 		newTransaction.setAmount(25000.15);
 		newTransaction.setDataInsert(System.currentTimeMillis());
 		when(this.repositoryNewTransaction.save(newTransaction)).thenReturn(HttpStatus.NO_CONTENT);
