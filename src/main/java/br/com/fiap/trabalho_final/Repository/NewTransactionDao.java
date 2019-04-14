@@ -27,7 +27,7 @@ public class NewTransactionDao {
 
         long sobra = TimeUnit.MILLISECONDS.toSeconds(millisSecondsAtual - timeSpanSave);
 
-        transaction.setDataInsert(timeSpanSave);
+        transaction.setDataInsert(millisSecondsAtual);
 
 
         HttpStatus status = HttpStatus.CREATED;

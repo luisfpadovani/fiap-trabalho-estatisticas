@@ -1,0 +1,4 @@
+FROM openjdk8
+ADD targetdocker-fiap_trabalho_estatisticas.jar docker-fiap_trabalho_estatisticas.jar
+EXPOSE 9091
+ENTRYPOINT [java, -jar, docker-fiap_trabalho_estatisticas]

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: br.com.fiap.trabalho_final.TrabalhoFinalApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 19.893 s <<< FAILURE! - in br.com.fiap.trabalho_final.TrabalhoFinalApplicationTests
+SaveTransaction(br.com.fiap.trabalho_final.TrabalhoFinalApplicationTests)  Time elapsed: 0.705 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<204> but was:<415>
+	at br.com.fiap.trabalho_final.TrabalhoFinalApplicationTests.SaveTransaction(TrabalhoFinalApplicationTests.java:54)
+

@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.time.LocalDateTime;
+import io.swagger.annotations.Api;
 
-@Slf4j
+
 @RestController
+@Api(value = "Transaction", description = "API with services transactions")
 public class TransactionController {
 
     public NewTransactionDao daoNewTransactionDao;
